@@ -11,6 +11,9 @@ import { UserProfComponent } from './Pages/user-prof/user-prof.component';
 import { ResultsComponent } from './Pages/results/results.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { VoiceComponent } from './Components/voice/voice.component';
+import { SearchCardComponent } from './Components/search-card/search-card.component';
+import { PaginationComponent } from './Components/pagination/pagination.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { VoiceComponent } from './Components/voice/voice.component';
     UserProfComponent,
     ResultsComponent,
     HomeComponent,
-    VoiceComponent
+    VoiceComponent,
+    SearchCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,56 @@
+body {
+    font-family: "Karla", sans-serif;
+    background-color: #d0d0ce;
+    min-height: 100vh; 
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #37434d
+}
+
+.profile-button {
+    background: #37434d;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #37434d
+}
+
+.profile-button:focus {
+    background: #37434d;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #37434d;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #37434d;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #37434d;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #37434d
+}
+
+.profile{ 
+    max-height:90vh;
+    overflow: scroll; 
+  }
+  
+  .profile::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+

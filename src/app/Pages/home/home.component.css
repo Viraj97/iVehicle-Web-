@@ -4,6 +4,15 @@ body {
     min-height: 100vh; 
 }
 
+.search{
+    margin-top: 10px;
+}
+
+.logo{
+    max-width:50%; 
+    max-height:70%;
+}
+
 
 
   

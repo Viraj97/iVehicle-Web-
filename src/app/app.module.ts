@@ -14,6 +14,7 @@ import { VoiceComponent } from './Components/voice/voice.component';
 import { SearchCardComponent } from './Components/search-card/search-card.component';
 import { PaginationComponent } from './Components/pagination/pagination.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeHeaderComponent } from './Components/home-header/home-header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     VoiceComponent,
     SearchCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    HomeHeaderComponent
   ],
   imports: [
     BrowserModule,

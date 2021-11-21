@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { SearchCardComponent } from './Components/search-card/search-card.compon
 import { PaginationComponent } from './Components/pagination/pagination.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeHeaderComponent } from './Components/home-header/home-header.component';
+import { ChatbotComponent } from './Components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,15 @@ import { HomeHeaderComponent } from './Components/home-header/home-header.compon
     VoiceComponent,
     SearchCardComponent,
     PaginationComponent,
-    HomeHeaderComponent
+    HomeHeaderComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

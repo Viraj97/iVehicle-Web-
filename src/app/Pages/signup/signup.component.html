@@ -20,20 +20,56 @@
           <div class="col-md-7">
             <div class="card-body">
               <p class="login-card-description">Register Here!</p>
-              <form action="#!">
-                  <div class="form-group">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                <form action="/action_page.php">     
+                  <div class="container">
+                    <div class="form-group" [class.has-error]="email.invalid && email.touched ">
+                      <label for='name' class="control-lable">Email</label>
+                      <input type="text" placeholder="Enter Email" required #email="ngModel" class="form-control" id="email" [(ngModel)]="model.email"
+                        name="Email">
+                        <span class="help-block"
+                        *ngIf="email.invalid && email.touched">
+                      Email is required
+                      </span>
+                    </div>				
+                    <div class="form-group mb-4" [class.has-error]="fName.invalid && fName.touched ">
+                      <label for='name' class="control-lable">First Name</label>
+                      <input type="text" placeholder="Enter First Name" required #fName="ngModel" class="form-control" id="fName" [(ngModel)]="model.fName"
+                        name="firstName">
+                        <span class="help-block"
+                        *ngIf="fName.invalid && fName.touched">
+                      First Name is required
+                      </span>
+                    </div>
+                    <div class="form-group mb-4" [class.has-error]="lName.invalid && lName.touched ">
+                      <label for='name' class="control-lable">Last Name</label>
+                      <input type="text" placeholder="Enter Last Name" required #lName="ngModel" class="form-control" id="lName" [(ngModel)]="model.lName"
+                        name="lastName">
+                        <span class="help-block"
+                        *ngIf="lName.invalid && lName.touched">
+                      Last Name is required
+                      </span>
+                    </div>
+                    <div class="form-group mb-4" [class.has-error]="password.invalid && password.touched ">
+                      <label for='password' class="control-lable">Password</label>
+                      <input type="password" placeholder="Enter Password" required #password="ngModel" class="form-control" id="password" [(ngModel)]="model.password"
+                        name="password">
+                        <span class="help-block"
+                        *ngIf="password.invalid && password.touched">
+                      Password is required
+                      </span>
+                    </div>
+                    <div class="form-group mb-4" [class.has-error]="username.invalid && username.touched ">
+                      <label for='username' class="control-lable">Username</label>
+                      <input type="username" placeholder="Enter username" required #username="ngModel" class="form-control" id="username" [(ngModel)]="model.username"
+                        name="username">
+                        <span class="help-block"
+                        *ngIf="username.invalid && username.touched">
+                      Username is required
+                      </span>
+                    </div>
+            
+                    <button name="register" id="register" class="btn btn-block login-btn mb-4" type="submit" (click)="method1()">Register</button>
                   </div>
-                  <div class="form-group mb-4">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                  </div>
-                  <div class="form-group mb-4">
-                    <label for="password" class="sr-only">Confirm Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password">
-                  </div>
-                  <input name="register" id="register" class="btn btn-block login-btn mb-4" type="button" value="Register" routerLink="/home">
                 </form>
                 <p class="login-card-footer-text">Already Registered? <a routerLink="/" class="text-reset">Login here</a></p>
             </div>

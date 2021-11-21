@@ -20,16 +20,29 @@
           <div class="col-md-7">
             <div class="card-body">
               <p class="login-card-description">Login to your account</p>
-              <form action="#!">
-                  <div class="form-group">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                <form action="/action_page.php">     
+                  <div class="container">				
+                    <div class="form-group" [class.has-error]="uName.invalid && uName.touched ">
+                      <label for='name' class="control-lable">Username</label>
+                      <input type="text" placeholder="Enter Username" required #uName="ngModel" class="form-control" id="uName" [(ngModel)]="model.uName"
+                        name="Username">
+                        <span class="help-block"
+                        *ngIf="uName.invalid && uName.touched">
+                      Username is required
+                      </span>
+                    </div>
+                    <div class="form-group mb-4" [class.has-error]="pw.invalid && pw.touched ">
+                      <label for='password' class="control-lable">Password</label>
+                      <input type="password" placeholder="Enter Password" required #pw="ngModel" class="form-control" id="pw" [(ngModel)]="model.pw"
+                        name="pw">
+                        <span class="help-block"
+                        *ngIf="pw.invalid && pw.touched">
+                      Password is required
+                      </span>
+                    </div>
+            
+                    <button name="register" id="register" class="btn btn-block login-btn mb-4" type="submit" (click)="method1()">Login</button>
                   </div>
-                  <div class="form-group mb-4">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="***********">
-                  </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login" routerLink="/home">
                 </form>
                 <p class="login-card-footer-text">Don't have an account? <a routerLink="/signin" class="text-reset">Register here</a></p>
             </div>

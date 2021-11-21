@@ -13,6 +13,21 @@ body {
     max-height:70%;
 }
 
+.icons{
+    display: flex;
+}
+.voice{
+    width: 70%;
+    padding: 0px;
+    background-color: brown;
+}
+
+.chat{
+    width: 30%;
+    padding: 0px;
+    background-color: aqua;
+}
+
 
 
   

@@ -17,15 +17,15 @@ export class SearchEngineComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
-
+  
   method1() {
     this.http
-      .get('http://127.0.0.1:8080/search', {
+      .get('https://ivehicle.herokuapp.com/search', {
         params: {
           query: this.model.searchQuery,
         },
       })
-      .subscribe((response) => {
+      .subscribe((response:any) => {
         this.vehicleItems = response;
         this.newItemEvent.emit(this.vehicleItems);
       });

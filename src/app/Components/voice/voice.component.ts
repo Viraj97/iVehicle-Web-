@@ -11,5 +11,12 @@ export class VoiceComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  pythonCall(){
 
+  var PythonShell = require('python-shell');
+  PythonShell.run('my_script.py', Option, function(err:any, results:any) {
+    console.log(results);
+    })
+  } 
 }

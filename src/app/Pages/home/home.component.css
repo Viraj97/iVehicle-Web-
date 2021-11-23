@@ -1,11 +1,11 @@
 body {
     font-family: "Karla", sans-serif;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     min-height: 100vh; 
 }
 
 .search{
-    margin-top: 10px;
+    margin-top: -26px;
 }
 
 .logo{
@@ -17,15 +17,14 @@ body {
     display: flex;
 }
 .voice{
-    width: 70%;
-    padding: 0px;
-    background-color: brown;
+    width: 80%;
+    padding-left: 20%;
 }
 
 .chat{
-    width: 30%;
-    padding: 0px;
-    background-color: aqua;
+    width: 20%;
+    padding-top: 3%;
+    padding-left: 10%;
 }
 
 

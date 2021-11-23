@@ -1,22 +1,74 @@
 .header{
-background-color: #d0d0ce;
+background-color: #ffffff;
 }
-
-.buttons{
-    margin-top: 20px;
-}
-
-
-@media all and (min-width: 992px) {
-	.navbar .dropdown-menu-end{ right:0; left: auto;  }
-	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
-	.navbar .nav-item:hover .nav-link{ color: #fff;  }
-	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
-	.navbar .dropdown-menu.fade-up{ top:180%;  }
-	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
-}
-
 .menu{
     max-width:5%; 
     max-height:7%;
 }
+
+a {
+	text-decoration: none;
+  }
+  
+  nav {
+	  font-family: sans-serif;
+  }
+  
+  ul {
+	  list-style: none;
+	  margin: 0;
+	  padding-left: 0;
+  }
+  
+  li {
+	  background-color: rgb(255, 255, 255);
+	  display: block;
+	  float: left;
+	  padding: 1rem;
+	  position: relative;
+	  text-decoration: none;
+	transition-duration: 1s;
+  }
+	
+  li a {
+	color: rgb(255, 255, 255);
+	background-color: #f17d1e;
+	min-width: 10rem;
+  }
+  
+  li:hover {
+	  cursor: pointer;
+	  background-color: #dd6a0b;
+  }
+  
+  ul li ul {
+	  visibility: hidden;
+	opacity: 0;
+	min-width: 5rem;
+	  position: absolute;
+	transition: all 1s ease;
+	  left: 0;
+	display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+  }
+  
+  ul li ul li {
+	  clear: both;
+	width: 100%;
+	
+  }
+  .settings{
+	position: relative;
+	padding-right: 90px;
+  }
+
+  .iconSettings:hover{
+	cursor: pointer;
+	background-color: #ffffff;
+  }

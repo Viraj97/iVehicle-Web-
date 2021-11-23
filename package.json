@@ -21,8 +21,10 @@
     "@angular/router": "~13.0.2",
     "@material/card": "^13.0.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "ngx-mqtt": "^9.0.5",
     "python-shell": "^3.0.1",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.2.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -40,15 +42,12 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.4"
   },
-
-  "browser":{
+  "browser": {
     "child_process": false,
     "fs": false,
     "path": false,
     "os": false,
     "stream": false,
     "util": false
-    } 
-
-
+  }
 }

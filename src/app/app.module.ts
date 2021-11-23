@@ -18,6 +18,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeHeaderComponent } from './Components/home-header/home-header.component';
 import { ChatbotComponent } from './Components/chatbot/chatbot.component';
 
+import { IMqttServiceOptions, MqttModule } from "ngx-mqtt";
+import { InstructionsComponent } from './Components/instructions/instructions.component';
+
+const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: "mqtt.myweb.com",
+  port: 1883,
+  protocol: ("wss" === "wss") ? "wss" : "ws",
+  path: '',
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +42,15 @@ import { ChatbotComponent } from './Components/chatbot/chatbot.component';
     SearchCardComponent,
     PaginationComponent,
     HomeHeaderComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    InstructionsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
     ReactiveFormsModule
   ],
   providers: [],

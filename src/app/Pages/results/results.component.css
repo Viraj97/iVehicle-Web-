@@ -1,13 +1,13 @@
 body {
     font-family: "Karla", sans-serif;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     max-height: 110vh; 
 }
 
 .card{
     margin-top: 40px;
     max-width: 60%;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     border: 0px;
     margin-left: 20%;
 }
@@ -16,13 +16,13 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     max-width: 60%;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     border: 0px;
     margin-left: 20%;
 }
 .cardFirst{
     max-width: 60%;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     border: 0px;
     margin-left: 20%;
 }

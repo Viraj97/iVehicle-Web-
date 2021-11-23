@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-search-engine',
@@ -17,7 +18,16 @@ export class SearchEngineComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
-  
+
+  sweetAlertSuccess(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: '',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
   method1() {
     this.http
       .get('https://ivehicle.herokuapp.com/search', {
@@ -37,5 +47,6 @@ export class SearchEngineComponent implements OnInit {
 
   searchEnterPressed() {
     this.method1();
+    this.sweetAlertSuccess();
   }
 }

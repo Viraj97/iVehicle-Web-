@@ -1,7 +1,11 @@
 body {
     font-family: "Karla", sans-serif;
-    background-color: #d0d0ce;
+    background-color: #ffffff;
     min-height: 100vh; 
+}
+
+.container{
+    background-color: rgba(223, 222, 222, 0.753);
 }
 
 .form-control:focus {

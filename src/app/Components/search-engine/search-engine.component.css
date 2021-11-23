@@ -1,10 +1,6 @@
 .container {
 }
 
-body {
-    background: #d1d5db
-}
-
 .form {
     position: relative
 }
@@ -35,10 +31,11 @@ body {
 .form-input {
     height: 55px;
     text-indent: 33px;
-    border-radius: 10px
+    border-radius: 10px;
+    border-color: black;
 }
 
 .form-input:focus {
     box-shadow: none;
-    border: none
+    border-color: #f18508;
 }

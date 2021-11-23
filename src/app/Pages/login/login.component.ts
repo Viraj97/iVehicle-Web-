@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       })
       .subscribe((response: any) => {
         if (response) {
+          localStorage.setItem('userEmail', response.email);
           this.router.navigate(['/home']);
           this.sweetAlertSuccess();
         } else {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">.
+<!-- imported google fonts, bootstrap and icons -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,28 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
+<!-- screen starts here -->
 <body>
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
+            <!-- loin image -->
             <img src="./../../../assets/images/one.jpg" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
+              <!-- title -->
               <p class="login-card-description">Login to your account</p>
                 <form action="/action_page.php">     
                   <div class="container">				
                     <div class="form-group" [class.has-error]="uName.invalid && uName.touched ">
                       <label for='name' class="control-lable">Username</label>
+                      <!-- user input for username and combined with ts -->
                       <input type="text" placeholder="Enter Username" required #uName="ngModel" class="form-control" id="uName" [(ngModel)]="model.uName"
                         name="Username">
+                        <!-- validation -->
                         <span class="help-block"
                         *ngIf="uName.invalid && uName.touched">
                       Username is required
@@ -33,14 +39,16 @@
                     </div>
                     <div class="form-group mb-4" [class.has-error]="pw.invalid && pw.touched ">
                       <label for='password' class="control-lable">Password</label>
+                      <!-- user input for password and combined with ts -->
                       <input type="password" placeholder="Enter Password" required #pw="ngModel" class="form-control" id="pw" [(ngModel)]="model.pw"
                         name="pw">
+                        <!-- validation -->
                         <span class="help-block"
                         *ngIf="pw.invalid && pw.touched">
                       Password is required
                       </span>
                     </div>
-            
+                    <!-- submit button -->
                     <button name="register" id="register" class="btn btn-block login-btn mb-4" type="submit" (click)="method1()">Login</button>
                   </div>
                 </form>

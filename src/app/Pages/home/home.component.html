@@ -9,18 +9,22 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
+  <!-- home header component called -->
     <app-home-header></app-home-header>
     <div class="d-flex justify-content-center align-items-center">
       <img src='./../../../assets/images/logo.png' class="logo">
     </div>
     <div class="search">
+      <!-- search engine component called -->
       <app-search-engine (newItemEvent)="addItem($event)"></app-search-engine>
     </div>
     <div class="icons">
     <div class="voice">
+      <!-- voice component called -->
       <app-voice></app-voice>
     </div>
     <div class="chat">
+      <!-- chatbot component called -->
       <app-chatbot></app-chatbot>
     </div>
     </div>

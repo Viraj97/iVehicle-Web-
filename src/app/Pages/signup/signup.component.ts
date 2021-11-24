@@ -49,7 +49,7 @@ export class SignupComponent implements OnInit {
       })
       .subscribe((response: any) => {
         if (response) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/']);
           this.sweetAlertSuccess
         } else {
           console.log('error');
